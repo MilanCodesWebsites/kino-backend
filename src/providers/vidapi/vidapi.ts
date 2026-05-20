@@ -72,7 +72,10 @@ export class VidApiProvider extends BaseProvider {
             const diagnostics: ProviderResult['diagnostics'] = [];
 
             const sources: Source[] = (data.stream_urls ?? [])
-                .filter((streamUrl: string) => !streamUrl.includes('strategicgrowthpartners'))
+                .filter(
+                    (streamUrl: string) =>
+                        !streamUrl.includes('strategicgrowthpartners')
+                )
                 .map((streamUrl: string): Source => {
                     const sourceType: SourceType =
                         streamUrl.includes('mp4') || streamUrl.includes('mkv')
