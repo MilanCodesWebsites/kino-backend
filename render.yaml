@@ -12,6 +12,8 @@ services:
       envVars:
           - key: NODE_ENV
             value: 'production'
+          - key: HOST
+            value: '0.0.0.0'
           - key: CACHE_TYPE
             value: 'memory'
           - key: STREMIO_ADDON
